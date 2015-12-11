@@ -16,14 +16,18 @@ export default function enableSentry({ filename, components, imports }) {
       'componentDidUpdate',
       'componentWillUnmount'
     ];
-    
+
     wrapThisMethods.forEach(m => {
       const originalMethod = ReactClass.prototype[m];
+      if (!originalMethod) {
+        return;
+      }
       ReactClass.prototype[m] = function tryWrappedMethod() {
         try {
           return originalMethod.apply(this, arguments);
         } catch (err) {
-          Raven.captureException(err);
+          Raven.captureException(err, {extra: {component: ReactClass.name, method: m }});
+          throw err;
         }
       };
     });

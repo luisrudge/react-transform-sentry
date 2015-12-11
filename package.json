@@ -1,6 +1,6 @@
 {
   "name": "react-transform-sentry",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A React Transform that catches errors inside React's lifecycle methods and reports to sentry.",
   "main": "lib/index.js",
   "repository": {
