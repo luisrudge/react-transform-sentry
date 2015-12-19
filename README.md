@@ -28,7 +28,6 @@ It must be an array of the transforms you want to use:
 
 ```js
 {
-  "stage": 0,
   "env": {
     "production": { //only applies when NODE_ENV is set to 'production'
       "plugins": [
