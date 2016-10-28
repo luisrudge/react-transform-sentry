@@ -31,16 +31,20 @@ It must be an array of the transforms you want to use:
   "env": {
     "production": { //only applies when NODE_ENV is set to 'production'
       "plugins": [
-        "react-transform"
-      ],
-      "extra": {
-        "react-transform": {
-          "transforms": [{
-            "transform" : "react-transform-sentry",
-            "imports" : ["react"]
-          }]
-        }
-      }
+        [
+          "react-transform",
+          {
+            "transforms": [
+              {
+                "transform": "react-transform-sentry",
+                "imports": [
+                  "react"
+                ]
+              }
+            ]
+          }
+        ]
+      ]
     }
   }
 }
