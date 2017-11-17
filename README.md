@@ -1,3 +1,6 @@
+# This project is deprecated and not maintained.
+You should totally use React@16+ with error boundaries: https://blog.sentry.io/2017/09/28/react-16-error-boundaries
+
 # react-transform-sentry
 
 A [React Transform](https://github.com/gaearon/babel-plugin-react-transform) that catches errors inside React's lifecycle methods and reports to [sentry](https://getsentry.com).
